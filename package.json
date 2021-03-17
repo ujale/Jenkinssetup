@@ -8,11 +8,10 @@
     "cy:run": "cypress run",
     "chrome": "npx cypress run --headless --browser -chrome",
     "firefox": "npx cypress run --headless --browser -firefox"
-
   },
   "repository": {
     "type": "git",
-    "url": "https://Ujale@bitbucket.org/Ujale/jenkinssetup.git"
+    "url": "git+https://Ujale@bitbucket.org/Ujale/jenkinssetup.git"
   },
   "keywords": [
     "test jenkins setup"
