@@ -1,1 +1,4 @@
-{}
+{
+    "defaultCommandTimeout": 150000,
+    "pageLoadTimeout": 120000
+}
