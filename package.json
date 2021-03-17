@@ -1,0 +1,26 @@
+{
+  "name": "visualregression",
+  "version": "1.0.0",
+  "description": "Visual Testing",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "chrome": "npx cypress run --headless --browser -chrome",
+    "firefox": "npx cypress run --headless --browser -firefox"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://Ujale@bitbucket.org/Ujale/jenkinssetup.git"
+  },
+  "keywords": [
+    "test jenkins setup"
+  ],
+  "author": "Udeme",
+  "license": "ISC",
+  "homepage": "https://Ujale@bitbucket.org/Ujale/jenkinssetup.git#readme",
+  "devDependencies": {
+    "cypress": "^6.7.1"
+  }
+}
