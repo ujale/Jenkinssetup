@@ -25,6 +25,6 @@ bat label: 'Run test', script: 'npm run firefox'
  }
  post {
  success {
- mail to: team@example.com, subject: ‘The Pipeline success :(‘
+ mail bcc: '', body: 'Hello', cc: 'grace.ohanwusi@venturegardengroup.com', from: '', replyTo: '', subject: 'Test', to: 'udeme.jalekun@venturegardengroup.com'
  }
 }
