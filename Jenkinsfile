@@ -1,4 +1,4 @@
-pipeline {
+//pipeline {
 //  agent any
 // node('master') {
 // stage("Git checkout"){
@@ -16,5 +16,4 @@ pipeline {
  success {
  mail bcc: '', body: 'Hello', cc: 'grace.ohanwusi@venturegardengroup.com', from: '', replyTo: '', subject: 'Test', to: 'udeme.jalekun@venturegardengroup.com'
  }
-}
 }
