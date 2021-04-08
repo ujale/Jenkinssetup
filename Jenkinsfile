@@ -16,9 +16,20 @@ git credentialsId: '431d8653-9188-4c8b-ac55-2ac985679f6d', url: 'https://Ujale@b
         
         bat label: 'Run test', script: 'npx cypress run' 
     }
-    post {
-        always {
-            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+    // post {
+    //     always {
+    //         emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+    //     }
+    // }
+    stage("Send Email"){
+            def mailRecipients = "uniqueudeme@gmail.com"
+            def jobName = currentBuild.fullDisplayName
+            emailext body: '''${SCRIPT, template="groovy-html.template"}''',
+            mimeType: 'text/html',
+            subject: "[Jenkins] ${jobName}",
+            to: "${mailRecipients}",
+            replyTo: "${mailRecipients}",
+            recipientProviders: [[$class: 'CulpritsRecipientProvider']]
         }
     }
 }   
