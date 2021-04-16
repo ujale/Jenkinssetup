@@ -18,7 +18,7 @@ git credentialsId: '575339dd-681c-4bff-9539-b9add2f0d46f', url: 'https://github.
     }
     
     stage("Send Email"){
-            def mailRecipients = "uniqueudeme@gmail.com"
+            def mailRecipients = "basseyudeme37@yahoo.com"
             def jobName = currentBuild.fullDisplayName
             emailext body: '''${SCRIPT, template="groovy-html.template"}''',
             mimeType: 'text/html',
