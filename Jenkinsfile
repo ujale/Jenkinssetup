@@ -2,7 +2,7 @@ node('master') {
     
     stage("Git checkout"){
     
-git credentialsId: '431d8653-9188-4c8b-ac55-2ac985679f6d', url: 'https://Ujale@bitbucket.org/Ujale/jenkinssetup.git'
+git credentialsId: '575339dd-681c-4bff-9539-b9add2f0d46f', url: 'https://github.com/ujale/Jenkinssetup.git'
 
     }
     
