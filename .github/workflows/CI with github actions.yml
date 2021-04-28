@@ -1,5 +1,7 @@
 name: Jenkinssetup CICD test using git actions
+
 on: [push]
+
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -16,3 +18,4 @@ jobs:
       
       - name: Run Cypress tests
       - run: npm run chrome
+        continue-on-error: true
