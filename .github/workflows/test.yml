@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install a project with a clean slate
         run: |
-          npx cypress run,
+          npx cypress run
           $(npm bin)/cypress cache path
           $(npm bin)/cypress cache list
           $(npm bin)/cypress verify
