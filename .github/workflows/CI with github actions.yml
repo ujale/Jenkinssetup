@@ -17,9 +17,9 @@ jobs:
 
       - name: Install a project with a clean slate
         run: |
-          npx cypress run
+          npm ci
           $(npm bin)/cypress cache path
           $(npm bin)/cypress cache list
           $(npm bin)/cypress verify
-      - name: Run Cypress tests
-        run: npm run chrome
+      - name: Run Cypress tests for Orbit UI on prod
+        run: npm run cy:run
