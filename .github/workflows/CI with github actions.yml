@@ -1,22 +1,25 @@
-name: Jenkinssetup CICD test using git actions
+name: cypressbdd CICD test using git actions
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node14.16.0-chrome89-ff86
+
     steps:
-      - name: Checkout source code
-        uses: actions/checkout@v2
-      
+      - uses: actions/checkout@v2
+
       - name: Install a project with a clean slate
-      - run: |
-            npm ci
-            $(npm bin)/cypress cache path
-            $(npm bin)/cypress cache list
-            $(npm bin)/cypress verify
-      
-      - name: Run Cypress Tests
-      - run: npm run cy:run
-        
+        run: |
+          npx cypress run
+          $(npm bin)/cypress cache path
+          $(npm bin)/cypress cache list
+          $(npm bin)/cypress verify
+      - name: Run Cypress tests
+        run: npm run chrome
