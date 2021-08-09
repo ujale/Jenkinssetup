@@ -17,6 +17,6 @@ jobs:
             $(npm bin)/cypress cache list
             $(npm bin)/cypress verify
       
-      - name: Run Cypress tests
+      - name: Run Cypress Tests
       - run: npm run chrome
         continue-on-error: true
