@@ -22,5 +22,5 @@ jobs:
           $(npm bin)/cypress cache list
           $(npm bin)/cypress verify
         
-      - name: Run Orbit Web Login Test (Prod)
+      - name: Run Orbit Web Login Test (Prod.)
         run: npm run cy:run
