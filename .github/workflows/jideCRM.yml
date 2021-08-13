@@ -2,8 +2,7 @@ name: Orbit Web Login
 
 on: 
   pull_request:
-  schedule:
-    - cron: '0 5 * * *'  
+    
   
 jobs:
   cypress-run:
