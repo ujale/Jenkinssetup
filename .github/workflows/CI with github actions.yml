@@ -23,5 +23,5 @@ jobs:
           $(npm bin)/cypress cache path
           $(npm bin)/cypress cache list
           $(npm bin)/cypress verify
-      - name: Run Cypress tests for Orbit UI on Prod.
+      - name: Run Cypress tests for Orbit UI on Prod
         run: npm run cy:run
